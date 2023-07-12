@@ -99,6 +99,42 @@
           }
         }
       }
+    },
+    "as-ui-library": {
+      "projectType": "library",
+      "root": "projects/as-ui-library",
+      "sourceRoot": "projects/as-ui-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/as-ui-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/as-ui-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/as-ui-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/as-ui-library/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "b41f0ca9-aac8-4e81-8cee-e61970f04cad"
   }
 }
