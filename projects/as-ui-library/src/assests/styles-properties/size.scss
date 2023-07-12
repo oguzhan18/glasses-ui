@@ -1,0 +1,26 @@
+@for $o from 0 through 100 {
+  .ml-#{$o} {
+    margin-left: #{$o}rem !important;
+  }
+  .mr-#{$o} {
+    margin-right: #{$o}rem !important;
+  }
+  .mt-#{$o} {
+    margin-top: #{$o}rem !important;
+  }
+  .mb-#{$o} {
+    margin-bottom: #{$o}rem !important;
+  }
+  .pl-#{$o} {
+    padding-left: #{$o}rem !important;
+  }
+  .pr-#{$o} {
+    padding-right: #{$o}rem !important;
+  }
+  .pt-#{$o} {
+    padding-top: #{$o}rem !important;
+  }
+  .pb-#{$o} {
+    padding-bottom: #{$o}rem !important;
+  }
+}

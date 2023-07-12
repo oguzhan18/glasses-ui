@@ -1,0 +1,60 @@
+:root {
+  --primary-color: #0940f6;
+  --danger-color: #b90505;
+  --info-color: #7ebcd3;
+  --secondary-color: #6c757d;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --white-color: #ffffff;
+  --warning-color: #ffc107;
+  --success-color: #28a745;
+
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.danger {
+  color: var(--danger-color);
+}
+
+.info {
+  color: var(--info-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.light {
+  color: var(--light-color);
+}
+
+.dark {
+  color: var(--dark-color);
+}
+
+.white {
+  color: var(--white-color);
+}
+
+.warning {
+  color: var(--warning-color);
+}
+
+.success {
+  color: var(--success-color);
+}
+
+
+@for $i from 0 through 100 {
+  .w-#{$i} {
+    width: #{$i}'%' !important;
+  }
+  .h-#{$i} {
+    height: #{$i}vh !important;
+  }
+
+
+}
