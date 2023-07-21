@@ -1,10 +1,47 @@
 @import "./styles-properties/color";
 @import "./styles-properties/size";
 
+$align-properties: (
+        "text-align": (left, center, right, justify),
+        "vertical-align": (baseline, top, middle, bottom),
+        "align-items": (flex-start, flex-end, center, baseline, stretch),
+        "align-self": (flex-start, flex-end, center, baseline, stretch),
+        "justify-content": (flex-start, flex-end, center, space-between, space-around, space-evenly)
+);
 
-
-@mixin responsive($breakpoint) {
-  @media (min-width: $breakpoint) {
-    @content;
+@function format-unit($value, $unit) {
+  @if type-of($value) == "number" {
+    @return #{$value}#{$unit};
+  } @else {
+    @return $value;
   }
 }
+
+@mixin generate-align() {
+  @each $property, $values in $align-properties {
+    @each $value in $values {
+      .#{$property}-#{$value} {
+        @if $property == "text-align" {
+          #{$property}: format-unit($value, '');
+        } @else {
+          &.vertical-align-#{$value} {
+            display: inline-block;
+            vertical-align: $value;
+          }
+          @if $property == "align-items" {
+            &.align-items-#{$value} {
+              display: flex;
+              align-items: $value;
+            }
+          }
+          &.justify-content-#{$value} {
+            display: flex;
+            justify-content: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include generate-align();
