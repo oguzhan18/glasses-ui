@@ -1,2 +1,10 @@
 @import "./styles-properties/color";
 @import "./styles-properties/size";
+
+
+
+@mixin responsive($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
