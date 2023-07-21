@@ -1,11 +1,9 @@
 @import "./styles-properties/color";
 @import "./styles-properties/size";
-
 $align-properties: (
         "text-align": (left, center, right, justify),
         "vertical-align": (baseline, top, middle, bottom),
-        "align-items": (flex-start, flex-end, center, baseline, stretch),
-        "align-self": (flex-start, flex-end, center, baseline, stretch),
+         "align-self": (flex-start, flex-end, center, baseline, stretch),
         "justify-content": (flex-start, flex-end, center, space-between, space-around, space-evenly)
 );
 
@@ -28,14 +26,8 @@ $align-properties: (
             display: inline-block;
             vertical-align: $value;
           }
-          @if $property == "align-items" {
-            &.align-items-#{$value} {
-              display: flex;
-              align-items: $value;
-            }
-          }
           &.justify-content-#{$value} {
-            display: flex;
+            display: flex; // Flex container yapıyoruz
             justify-content: $value;
           }
         }
