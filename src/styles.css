@@ -127154,6 +127154,18 @@
   left: 0px;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-none {
+  float: none;
+}
+
 .font-font-family-Arial {
   font-family: "Arial";
 }
