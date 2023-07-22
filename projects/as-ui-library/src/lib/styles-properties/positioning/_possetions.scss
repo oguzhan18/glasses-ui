@@ -40,7 +40,6 @@ $position-values: (
         }
       }
 
-      // Special case for "left" property with negative values
       @for $i from -100 through 0 {
         .#{$position}.#{$prop}-#{$i} {
           position: $position;
