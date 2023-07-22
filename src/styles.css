@@ -127154,6 +127154,106 @@
   left: 0px;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.align-items-flex-start {
+  align-items: flex-start;
+}
+
+.align-items-flex-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.align-content-stretch {
+  align-content: stretch;
+}
+
+.align-content-flex-start {
+  align-content: flex-start;
+}
+
+.align-content-flex-end {
+  align-content: flex-end;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-content-space-between {
+  align-content: space-between;
+}
+
+.align-content-space-around {
+  align-content: space-around;
+}
+
 .float-left {
   float: left;
 }
@@ -128412,6 +128512,78 @@
 
 .shadow-color-info {
   box-shadow: 0 0 5px #7ebcd3;
+}
+
+.hover-transition:hover {
+  transition: "opacity 0.2s ease-in-out";
+  transition: "transform 0.2s ease-in-out";
+  transition: "box-shadow 0.2s ease-in-out";
+}
+
+.hover-transform:hover {
+  transform: "rotate(10deg)";
+  transform: "scale(1.2)";
+  transform: "translateX(10px)";
+  transform: "translateY(-10px)";
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+  opacity: 0.9;
+  opacity: 0.95;
+}
+
+.hover-box-shadow:hover {
+  box-shadow: "0 2px 4px rgba(0, 0, 0, 0.2)";
+  box-shadow: "0 4px 8px rgba(0, 0, 0, 0.2)";
+}
+
+.focus-transition:focus {
+  transition: "opacity 0.2s ease-in-out";
+  transition: "transform 0.2s ease-in-out";
+  transition: "box-shadow 0.2s ease-in-out";
+}
+
+.focus-transform:focus {
+  transform: "rotate(10deg)";
+  transform: "scale(1.2)";
+  transform: "translateX(10px)";
+  transform: "translateY(-10px)";
+}
+
+.focus-opacity:focus {
+  opacity: 0.8;
+  opacity: 0.9;
+  opacity: 0.95;
+}
+
+.focus-box-shadow:focus {
+  box-shadow: "0 2px 4px rgba(0, 0, 0, 0.2)";
+  box-shadow: "0 4px 8px rgba(0, 0, 0, 0.2)";
+}
+
+.active-transition:active {
+  transition: "opacity 0.2s ease-in-out";
+  transition: "transform 0.2s ease-in-out";
+  transition: "box-shadow 0.2s ease-in-out";
+}
+
+.active-transform:active {
+  transform: "rotate(10deg)";
+  transform: "scale(1.2)";
+  transform: "translateX(10px)";
+  transform: "translateY(-10px)";
+}
+
+.active-opacity:active {
+  opacity: 0.8;
+  opacity: 0.9;
+  opacity: 0.95;
+}
+
+.active-box-shadow:active {
+  box-shadow: "0 2px 4px rgba(0, 0, 0, 0.2)";
+  box-shadow: "0 4px 8px rgba(0, 0, 0, 0.2)";
 }
 
 /*# sourceMappingURL=styles.css.map */
