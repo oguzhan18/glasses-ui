@@ -1,0 +1,43 @@
+@import "../colors/bg-color";
+
+$shadow-properties: (
+        "text": (0, 1px, 2px, 3px, 4px, 5px),
+        "box": (0, 1px, 2px, 3px, 4px, 5px),
+);
+
+$shadow-colors: (
+        'none': transparent,
+        'danger': map-get($colors, bg-danger),
+        'info': map-get($colors, bg-info),
+);
+
+@function format-shadow-value($x, $y, $blur, $color) {
+  @return #{$x}px #{$y}px #{$blur}px $color;
+}
+
+@mixin generate-shadow() {
+  @each $property, $values in $shadow-properties {
+    @each $value in $values {
+      @if $property == "text" {
+        .shadow-text-#{$value} {
+          text-shadow: format-shadow-value(0, $value, 0, rgba(0, 0, 0, 0.5));
+        }
+      } @else {
+        .shadow-box-#{$value} {
+          box-shadow: format-shadow-value(0, 0, $value, rgba(0, 0, 0, 0.5));
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-shadow-color() {
+  @each $color-name, $color-value in $shadow-colors {
+    .shadow-color-#{$color-name} {
+      box-shadow: 0 0 5px $color-value;
+    }
+  }
+}
+
+@include generate-shadow();
+@include generate-shadow-color();
