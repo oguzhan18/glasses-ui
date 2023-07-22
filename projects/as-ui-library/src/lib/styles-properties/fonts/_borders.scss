@@ -1,41 +1,9 @@
-@function get-tone($color, $tone) {
-  $base-color: map-get($colors, $color);
-
-  @if ($tone == 0) {
-    @return $base-color;
-  } @else {
-    $new-tone: if($tone > 500, darken($base-color, (1000 - $tone) * 0.1), lighten($base-color, $tone * 0.1));
-    @return $new-tone;
-  }
-}
-@mixin generate-border() {
-  @each $property in $border-properties {
-    @each $value in $border-values {
-      .border-#{$property}-#{$value} {
-        @if $property == "color" {
-          border-color: get-tone($value, 500);
-        } @else {
-          border-#{$property}: format-unit($value, 'px');
-        }
-      }
-    }
-  }
-}
-
-
-
-
-
-// _border-library.scss
-
-$border-colors: (
-  // Renkleri burada tanımla
-);
+@import "../../styles-properties/colors/bg-color";
 
 $border-properties: (
         "width": (0, 1px, 2px, 3px, 4px, 5px),
         "style": (none, solid, dashed, dotted, double),
-        "color": map-keys($border-colors),
+        "color": map-keys($colors),
         "radius": (0, 5px, 10px, 15px, 20px, 25px, 30px, 50), // Değişiklik burada
 );
 
@@ -43,7 +11,7 @@ $border-properties: (
   @if $property == "width" {
     @return #{$value}px;
   } @else if $property == "color" {
-    @return map-get($border-colors, $value);
+    @return map-get($colors, $value);
   } @else if $property == "radius" {
     @return if($value == 50, "#{$value}%", "#{$value}px"); // Değişiklik burada
   } @else {
@@ -66,3 +34,45 @@ $border-properties: (
 }
 
 @include generate-border();
+
+
+//// _border-library.scss
+//
+//$border-colors: (
+//  // Renkleri burada tanımla
+//);
+//
+//$border-properties: (
+//        "width": (0, 1px, 2px, 3px, 4px, 5px),
+//        "style": (none, solid, dashed, dotted, double),
+//        "color": map-keys($border-colors),
+//        "radius": (0, 5px, 10px, 15px, 20px, 25px, 30px, 50), // Değişiklik burada
+//);
+//
+//@function format-border-value($property, $value) {
+//  @if $property == "width" {
+//    @return #{$value}px;
+//  } @else if $property == "color" {
+//    @return map-get($border-colors, $value);
+//  } @else if $property == "radius" {
+//    @return if($value == 50, "#{$value}%", "#{$value}px"); // Değişiklik burada
+//  } @else {
+//    @return $value;
+//  }
+//}
+//
+//@mixin generate-border() {
+//  @each $property, $values in $border-properties {
+//    @each $value in $values {
+//      .border-#{$property}-#{$value} {
+//        @if $property == "style" {
+//          border-style: $value;
+//        } @else {
+//          #{$property}: format-border-value($property, $value);
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//@include generate-border();
