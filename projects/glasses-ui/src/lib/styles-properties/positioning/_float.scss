@@ -1,0 +1,10 @@
+$float-values: (left, right, none);
+
+@mixin generate-float() {
+  @each $value in $float-values {
+    .float-#{$value} {
+      float: $value;
+    }
+  }
+}
+@include generate-float();

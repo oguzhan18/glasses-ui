@@ -1,0 +1,53 @@
+
+$positions: (
+        static,
+        relative,
+        absolute,
+        fixed,
+        sticky
+);
+
+$position-values: (
+        top,
+        right,
+        bottom,
+        left
+);
+
+@function format-unit($value, $unit) {
+  @if type-of($value) == "number" {
+    @return #{$value}#{$unit};
+  } @else {
+    @return $value;
+  }
+}
+
+@mixin generate-position() {
+  @each $position in $positions {
+    .#{$position} {
+      position: $position;
+    }
+
+    @each $prop in $position-values {
+      @for $i from 0 through 1000 {
+        .#{$position}.#{$prop}-#{$i} {
+          position: $position;
+          @if $prop == "left" or $prop == "right" {
+            #{$prop}: format-unit($i, 'px');
+          } @else {
+            #{$prop}: format-unit($i, 'px');
+          }
+        }
+      }
+
+      @for $i from -100 through 0 {
+        .#{$position}.#{$prop}-#{$i} {
+          position: $position;
+          #{$prop}: format-unit($i, 'px');
+        }
+      }
+    }
+  }
+}
+
+@include generate-position();

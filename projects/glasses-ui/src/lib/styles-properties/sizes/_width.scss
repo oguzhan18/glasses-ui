@@ -1,0 +1,17 @@
+@function convert-width($value, $unit) {
+  @return #{$value}#{$unit};
+}
+
+@mixin generate-width() {
+  $units: em, rem, px, vw, vh, ch, ex, pt, pc, mm, cm, in;
+  @each $unit in $units {
+    @for $i from 1 through 100 {
+      $class: if($unit == '%', '', $unit);
+      .w-#{$i}#{$class} {
+        width: convert-width($i, $unit);
+      }
+    }
+  }
+}
+
+@include generate-width();

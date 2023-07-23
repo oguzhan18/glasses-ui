@@ -1,0 +1,98 @@
+$button-colors: (
+        primary: #0940f6,
+        danger: #b90505,
+);
+
+$button-sizes: (
+        sm: (
+                font-size: 0.8rem,
+                padding: 0.25rem,
+        ),
+        md: (
+                font-size: 1rem,
+                padding: 0.5rem,
+        ),
+        lg: (
+                font-size: 1.2rem,
+                padding: 0.75rem,
+        ),
+        xl: (
+                font-size: 1.5rem,
+                padding: 1rem,
+        ),
+);
+
+$button-radius: 4px;
+
+$custom-buttons: (
+        custom-1: (
+                font-size: 1rem,
+                padding: 0.5rem 1rem,
+                background-color: #00ff00,
+                color: #ffffff,
+                border: none,
+                border-radius: $button-radius,
+        ),
+        custom-2: (
+                font-size: 0.8rem,
+                padding: 0.3rem 0.8rem,
+                background-color: #ff0000,
+                color: #ffffff,
+                border: 2px solid #ff0000,
+                border-radius: $button-radius,
+        ),
+);
+
+@function get-button-color($color) {
+  @return map-get($button-colors, $color);
+}
+
+@mixin generate-buttons() {
+  @each $color, $value in $button-colors {
+    .btn-#{$color} {
+      background-color: $value;
+      color: #ffffff;
+      padding: map-get(map-get($button-sizes, md), padding);
+      font-size: map-get(map-get($button-sizes, md), font-size);
+      border: none;
+      border-radius: $button-radius;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: box-shadow 0.3s;
+    }
+
+    @each $size, $size-props in $button-sizes {
+      .btn-#{$color}-#{$size} {
+        font-size: map-get($size-props, font-size);
+        padding: map-get($size-props, padding);
+      }
+    }
+    .btn-#{$color}:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @each $custom, $custom-props in $custom-buttons {
+    .btn-#{$custom} {
+      font-size: map-get($custom-props, font-size);
+      padding: map-get($custom-props, padding);
+      background-color: map-get($custom-props, background-color);
+      color: map-get($custom-props, color);
+      border: map-get($custom-props, border);
+      border-radius: map-get($custom-props, border-radius);
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: box-shadow 0.3s;
+    }
+
+    .btn-#{$custom}:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@include generate-buttons();

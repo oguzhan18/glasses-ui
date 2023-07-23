@@ -1,0 +1,48 @@
+@mixin generate-accordion() {
+  .accordion {
+    .accordion-item {
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+
+      .accordion-header {
+        padding: 1rem;
+        background-color: #f8f9fa;
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after {
+          content: "+";
+          display: inline-block;
+          margin-left: 0.5rem;
+          transition: transform 0.2s ease-in-out;
+        }
+      }
+
+      .accordion-content {
+        padding: 1rem;
+        display: none;
+        background-color: #fff;
+        color: #333;
+      }
+    }
+
+    .accordion-toggle {
+      display: none;
+    }
+
+    .accordion-toggle:checked + .accordion-item .accordion-content {
+      display: block;
+    }
+
+    .accordion-toggle:checked + .accordion-item .accordion-header::after {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@include generate-accordion();

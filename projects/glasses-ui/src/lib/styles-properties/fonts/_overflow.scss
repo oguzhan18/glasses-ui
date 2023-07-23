@@ -1,0 +1,16 @@
+$overflow-properties: (
+        "x": (visible, hidden, scroll, auto),
+        "y": (visible, hidden, scroll, auto),
+);
+
+@mixin generate-overflow() {
+  @each $property, $values in $overflow-properties {
+    @each $value in $values {
+      .overflow-#{$property}-#{$value} {
+        overflow-#{$property}: $value;
+      }
+    }
+  }
+}
+
+@include generate-overflow();
