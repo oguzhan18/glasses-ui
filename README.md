@@ -1,10 +1,8 @@
-<center>
-<h1>Glasses UI</h1> 
-</center>
-
+<h1 align="center"> <img src="src/assets/logo/glasses-ui-logo.png" widht="400" height="450"></h1>  
+  
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-A collection of reusable CSS classes to enhance your web development experience. This library provides various utilities, styles, and components that you can easily integrate into your projects.
+<strong>Glasses UI</strong> a collection of reusable CSS classes to enhance your web development experience. This library provides various utilities, styles, and components that you can easily integrate into your projects.
 
 ## Table of Contents
 
