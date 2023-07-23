@@ -1,4 +1,6 @@
-# Glasses UI
+<center>
+<h1>Glasses UI</h1> 
+</center>
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
