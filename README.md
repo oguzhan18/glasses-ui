@@ -1,4 +1,4 @@
-<h1 align="center"> <img src="src/assets/logo/glasses-ui-logo.png" widht="400" height="350"></h1>  
+<h1 align="center"> <img src="https://github.com/oguzhan18/glasses-ui/blob/master/src/assets/logo/glasses-ui-logo.png?raw=true" widht="400" height="350"></h1>  
   
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
