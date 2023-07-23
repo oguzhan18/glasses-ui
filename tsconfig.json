@@ -1,12 +1,6 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "paths": {
-      "glasses-ui-library": [
-        "dist/glasses-ui-library"
-      ]
-    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -21,11 +15,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "es5",
+    "module": "commonjs",
     "useDefineForClassFields": false,
     "lib": [
-      "ES2022",
+      "es6",
       "dom"
     ]
   },
