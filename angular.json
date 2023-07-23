@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "as-ui-app": {
+    "glasses-ui-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/as-ui-app",
+            "outputPath": "dist/glasses-ui-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "as-ui-app:build:production"
+              "browserTarget": "glasses-ui-app:build:production"
             },
             "development": {
-              "browserTarget": "as-ui-app:build:development"
+              "browserTarget": "glasses-ui-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "as-ui-app:build"
+            "browserTarget": "glasses-ui-app:build"
           }
         },
         "test": {
@@ -100,23 +100,23 @@
         }
       }
     },
-    "as-ui-library": {
+    "glasses-ui-library": {
       "projectType": "library",
-      "root": "projects/as-ui-library",
-      "sourceRoot": "projects/as-ui-library/src",
+      "root": "projects/glasses-ui-library",
+      "sourceRoot": "projects/glasses-ui-library/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/as-ui-library/ng-package.json"
+            "project": "projects/glasses-ui-library/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/as-ui-library/tsconfig.lib.prod.json"
+              "tsConfig": "projects/glasses-ui-library/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/as-ui-library/tsconfig.lib.json"
+              "tsConfig": "projects/glasses-ui-library/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -124,7 +124,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/as-ui-library/tsconfig.spec.json",
+            "tsConfig": "projects/glasses-ui-library/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

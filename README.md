@@ -1,4 +1,4 @@
-# as-ui-app
+# Glasses UI
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
@@ -22,13 +22,13 @@ A collection of reusable CSS classes to enhance your web development experience.
 You can install the library via npm:
 
 ```bash
-npm install as-ui-app
+npm install glassesui
 ```
 
 ## Usage
 To use the library in your project, import the style.scss file into your main SCSS file:
 ```bash
-@import 'as-ui-library/src/lib/style';
+@import 'glasses-ui-library/src/lib/style';
 ```
 
 After importing, you can start using the provided CSS classes in your HTML files.

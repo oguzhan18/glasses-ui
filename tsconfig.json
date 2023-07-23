@@ -3,8 +3,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "as-ui-library": [
-        "dist/as-ui-library"
+      "glasses-ui-library": [
+        "dist/glasses-ui-library"
       ]
     },
     "baseUrl": "./",

@@ -7,10 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  
-  title = 'as-ui-app';
-  test(){
-    console.log(this.title);
-    
-  }
+  title = 'glasses-ui-app';
+
  
 }
