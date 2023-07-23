@@ -22,7 +22,7 @@ A collection of reusable CSS classes to enhance your web development experience.
 You can install the library via npm:
 
 ```bash
-npm install glassesui
+npm i glasses-ui
 ```
 
 ## Usage
