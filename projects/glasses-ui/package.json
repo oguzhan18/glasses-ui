@@ -1,7 +1,7 @@
 {
   "name": "glasses-ui",
-  "version": "0.0.3",
-  "main": "src/lib/style.scss",
+  "version": "0.0.4",
+  "main": "style.scss",
   "publishConfig": {
     "access": "public"
   },

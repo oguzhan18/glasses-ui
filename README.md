@@ -28,7 +28,7 @@ npm i glasses-ui
 ## Usage
 To use the library in your project, import the style.scss file into your main SCSS file:
 ```bash
-@import 'glasses-ui-library/src/lib/style';
+@import 'glasses-ui/style';
 ```
 
 After importing, you can start using the provided CSS classes in your HTML files.
