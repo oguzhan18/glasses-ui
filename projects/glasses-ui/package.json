@@ -1,6 +1,6 @@
 {
   "name": "glasses-ui",
-  "version": "0.0.4-2",
+  "version": "0.0.4-3",
   "main": "style.scss",
   "publishConfig": {
     "access": "public"
