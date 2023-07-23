@@ -2,7 +2,6 @@
 <h1>Glasses UI</h1> 
 </center>
 
-
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 A collection of reusable CSS classes to enhance your web development experience. This library provides various utilities, styles, and components that you can easily integrate into your projects.
@@ -61,12 +60,12 @@ The library provides various border styles that you can apply to your elements:
 - .border-dashed: Dashed border style.
 - .border-dotted: Dotted border style.
 - .border-double: Double border style.
-You can also adjust the border width and color using the following classes:
+  You can also adjust the border width and color using the following classes:
 
 - .border-width-1px: 1-pixel border width.
 - .border-width-2px: 2-pixel border width.
 - .border-width-3px: 3-pixel border width.
-... (add more as needed)
+  ... (add more as needed)
 
 To specify the border color, use classes like .border-color-primary, .border-color-danger, etc., where the color corresponds to the button styles.
 
@@ -81,7 +80,7 @@ The library provides shadow styles that you can apply to elements:
 
 - .shadow-box: Basic box shadow effect.
 - .shadow-text: Shadow effect for text elements.
-You can also adjust the shadow size by using classes like .shadow-sm, .shadow-md, .shadow-lg, etc.
+  You can also adjust the shadow size by using classes like .shadow-sm, .shadow-md, .shadow-lg, etc.
 
 ```bash
 <div class="shadow-box shadow-md">Box with Shadow</div>
@@ -96,7 +95,7 @@ The library offers various text styles:
 - .text-right: Right-align text.
 - .text-uppercase: Convert text to uppercase.
 - .text-lowercase: Convert text to lowercase.
-- .text-capitalize: Capitalize the first letter of each word. 
+- .text-capitalize: Capitalize the first letter of each word.
 
 ```bash
 <h1 class="text-center">Centered Heading</h1>
@@ -111,7 +110,7 @@ The library provides background color classes:
 - .bg-success: Green background color.
 - .bg-warning: Yellow background color.
 - .bg-info: Cyan background color.
-You can also add custom background colors using the .bg-custom class and specifying the desired color using inline CSS.
+  You can also add custom background colors using the .bg-custom class and specifying the desired color using inline CSS.
 
 ```bash
 <div class="bg-primary">Blue Background</div>
