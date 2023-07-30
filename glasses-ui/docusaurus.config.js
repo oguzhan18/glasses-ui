@@ -58,24 +58,19 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: '../src/assets/logo/glasses-ui-logo.png',
       navbar: {
-        title: 'My Meta Project',
-        logo: {
-          alt: 'My Meta Project Logo',
-          src: 'img/logo.svg',
-        },
+        title: 'GLASSES UI',
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {to: 'blog', label: 'Blog', position: 'left'},
-          // Please keep GitHub link to the right for consistency.
-          {
-            href: 'https://github.com/facebook/docusaurus',
+           {
+            href: 'https://github.com/oguzhan18/glasses-ui',
             label: 'GitHub',
             position: 'right',
           },
