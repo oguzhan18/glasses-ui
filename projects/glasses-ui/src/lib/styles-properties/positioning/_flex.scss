@@ -1,53 +1,47 @@
-//$flex-direction-values: (row, row-reverse, column, column-reverse);
-//$flex-wrap-values: (nowrap, wrap, wrap-reverse);
-//$justify-content-values: (flex-start, flex-end, center, space-between, space-around, space-evenly);
-//$align-items-values: (stretch, flex-start, flex-end, center, baseline);
-//$align-content-values: (stretch, flex-start, flex-end, center, space-between, space-around);
-//
-//@mixin generate-flexbox() {
-//  .d-flex {
-//    display: flex;
-//  }
-//
-//  @each $value in $flex-direction-values {
-//    .flex-direction-#{$value} {
-//      flex-direction: $value;
-//    }
-//  }
-//
-//  @each $value in $flex-wrap-values {
-//    .flex-wrap-#{$value} {
-//      flex-wrap: $value;
-//    }
-//  }
-//
-//  @each $value in $justify-content-values {
-//    .justify-content-#{$value} {
-//      justify-content: $value;
-//    }
-//  }
-//
-//  @each $value in $align-items-values {
-//    .align-items-#{$value} {
-//      align-items: $value;
-//    }
-//  }
-//
-//  @each $value in $align-content-values {
-//    .align-content-#{$value} {
-//      align-content: $value;
-//    }
-//  }
-//}
-//
-//@include generate-flexbox();
-
-
-
-
-// _flex-grid.scss
 
 $column-count: 24;
+
+$flex-direction-values: (row, row-reverse, column, column-reverse);
+$flex-wrap-values: (nowrap, wrap, wrap-reverse);
+$justify-content-values: (flex-start, flex-end, center, space-between, space-around, space-evenly);
+$align-items-values: (stretch, flex-start, flex-end, center, baseline);
+$align-content-values: (stretch, flex-start, flex-end, center, space-between, space-around);
+
+@mixin generate-flexbox() {
+  .d-flex {
+    display: flex;
+  }
+
+  @each $value in $flex-direction-values {
+    .flex-direction-#{$value} {
+      flex-direction: $value;
+    }
+  }
+
+  @each $value in $flex-wrap-values {
+    .flex-wrap-#{$value} {
+      flex-wrap: $value;
+    }
+  }
+
+  @each $value in $justify-content-values {
+    .justify-content-#{$value} {
+      justify-content: $value;
+    }
+  }
+
+  @each $value in $align-items-values {
+    .align-items-#{$value} {
+      align-items: $value;
+    }
+  }
+
+  @each $value in $align-content-values {
+    .align-content-#{$value} {
+      align-content: $value;
+    }
+  }
+}
 
 @mixin generate-flex-grid() {
   .gls-container {
@@ -55,10 +49,6 @@ $column-count: 24;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-
-    &.text-center {
-      justify-content: center;
-    }
   }
 
   .gls-row {
@@ -77,4 +67,6 @@ $column-count: 24;
     }
   }
 }
+
+@include generate-flexbox();
 @include generate-flex-grid();
