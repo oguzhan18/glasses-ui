@@ -26,7 +26,7 @@ $align-properties: (
             vertical-align: $value;
           }
           &.justify-content-#{$value} {
-            display: flex; // Flex container yapıyoruz
+            display: flex;
             justify-content: $value;
           }
         }
