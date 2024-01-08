@@ -2,7 +2,7 @@
   
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-<strong>Glasses UI</strong> a collection of reusable CSS classes to enhance your web development experience. This library provides various utilities, styles, and components that you can easily integrate into your projects.
+<strong>Glasses UI (0.0.4-3)v </strong> a collection of reusable CSS classes to enhance your web development experience. This library provides various utilities, styles, and components that you can easily integrate into your projects.
 
 ## Table of Contents
 
