@@ -10,9 +10,11 @@ $colors: (
         bg-success: #28a745
 );
 
+
 $tones: (
         100, 200, 300, 400, 500, 600, 700, 800, 900
 );
+
 
 @function get-tone($color, $tone) {
   $base-color: map-get($colors, $color);
